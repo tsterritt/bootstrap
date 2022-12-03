@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Columns</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <style>
+        div[class|="col"],
+        div[class*="col"] {
+            border: 1px solid lightslategray;
+            background-color: lightskyblue;
+            height: 50px;
+            text-align: center;
+        }
+
+        .grid-example {
+            margin-top: 100px;
+        }
+
+        div[class*="light"] {
+            border: 1px solid lightslategray;
+            background-color: lightgreen;
+            height: 50px;
+            text-align: center;
+        }
+
+        .tall,
+        div[class*="row"] {
+            background-color: lightslategrey;
+            height: 150px;
+            margin-top: 20px;
+        }
+
+        div[class="row"],
+        div[class*="row justify"] {
+            background-color: lightslategrey;
+            height: 50px;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="mt-3">
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Vertical Alignment</h2>
+            <p>Use align-items to vertically align columns in the row. Use align-self to align the columns individually.
+                The row must have a specified height </p>
+            <div class="row align-items-start">
+                <div class="col">.align-items-start</div>
+                <div class="col">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col">.align-items-center</div>
+                <div class="col">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+            </div>
+            <div class="row align-items-end">
+                <div class="col">.align-items-end</div>
+                <div class="col">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Vertical Alignment</h2>
+            <p>Use align-self to align the columns individually. The row must have a specified height </p>
+            <div class="row tall">
+                <div class="col align-self-start">.align-self-start</div>
+                <div class="col align-self-center">.align-self-center</div>
+                <div class="col align-self-end">.align-self-end</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Horizontal Alignment</h2>
+            <p>Use justify-content on the row to align all the columns in hte row horizontally.</p>
+            <div class="row justify-content-start">
+                <div class="col-3">.justify-content-start</div>
+                <div class="col-3">&nbsp;</div>
+                <div class="col-3">&nbsp;</div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-3">.justify-content-center</div>
+                <div class="col-3">&nbsp;</div>
+                <div class="col-3">&nbsp;</div>
+            </div>
+            <div class="row justify-content-end">
+                <div class="col-3">.justify-content-end</div>
+                <div class="col-3">&nbsp;</div>
+                <div class="col-3">&nbsp;</div>
+            </div>
+            <div class="row justify-content-between">
+                <div class="col-3">.justify-content-between</div>
+                <div class="col-3">&nbsp;</div>
+                <div class="col-3">&nbsp;</div>
+            </div>
+            <div class="row justify-content-around">
+                <div class="col-3">.justify-content-around</div>
+                <div class="col-3">&nbsp;</div>
+                <div class="col-3">&nbsp;</div>
+            </div>
+            <div class="row justify-content-evenly">
+                <div class="col-3">.justify-content-evenly</div>
+                <div class="col-3">&nbsp;</div>
+                <div class="col-3">&nbsp;</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Column Wrapping</h2>
+            <p>If the specified column breakpoints in a row total greater than 12, the row will automatically wrap. </p>
+            <div class="row">
+                <div class="col-8">.col-8</div>
+                <div class="col-5">.col-5</div>
+                <div class="col-4">.col-4</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Forcing a breakpoint</h2>
+            <p>A div with class w-* will force a breakpoint in the row. The number used on the w- class will only force a break if the selected width works with the widths of the columns </p>
+            <div class="row">
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+                <div class="w-100"></div>
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Forcing a responsive breakpoint</h2>
+            <p>A div a responsive break point using w-* d-none d-lg-block with force a breakpoint at the large device width.</p>
+            <div class="row">
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+                <div class="w-100 d-none d-lg-block"></div>
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Changing order</h2>
+            <p>Use order-* classes to change order</p>
+            <div class="row">
+                <div class="col order-last">First changed to be last</div>
+                <div class="col order-start">Second changed to be first</div>
+                <div class="col order-1">Third changed to be second</div>
+                <div class="col">Unspecified order - so always number 2?</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Offsetting columns</h2>
+            <p>Use off-set to add a gap of a certain width</p>
+            <div class="row">
+                <div class="col-6 col-md-5 col-lg-4">col-6 col-md-4 col-lg-2</div>
+                <div class="col-6 col-md-5 offset-md-2 col-lg-4 offset-lg-4">col-6 col-md-4 offset-md-4 col-lg-2
+                    offset-lg-8
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-md-5 offset-md-2">col-6 col-md-4 offset-md-2</div>
+                <div class="col-6 col-md-5">col-6 col-md-4</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Spacing Utilities</h2>
+            <p>Use ms-* classes to add spacing around columns. m=margin, s=start(left), e=end(right), t=top, b=bottom, x=both left and right, y=both top and bottom. p=padding.
+                Numbers are increments of 0.25 to 3rem and can be adjusted with $spacer config</p>
+            <div class="row">
+                <div class="col-4">.col-4</div>
+                <div class="col-2 ms-auto">.col-2 .ms-auto</div>
+            </div>
+            <div class="row">
+                <div class="col-4">.col-4</div>
+                <div class="col-2 me-auto">.col-2 .me-auto</div>
+            </div>
+            <div class="row">
+                <div class="col-4 ms-auto">.col-4 .ms-auto</div>
+                <div class="col-2">.col-2</div>
+            </div>
+            <div class="row">
+                <div class="col-4 me-auto">.col-4 .me-auto</div>
+                <div class="col-2">.col-2</div>
+            </div>
+            <div class="row">
+                <div class="col-4 me-lg-5">.col-4 .me-lg-5</div>
+                <div class="col-2">.col-2</div>
+            </div>
+            <div class="row">
+                <div class="col-4">.col-4</div>
+                <div class="col-2 ms-1">.col-2 .ms-1</div>
+            </div>
+            <div class="row">
+                <div class="col-4">.col-4</div>
+                <div class="col-2 ms-2">.col-2 .ms-2</div>
+            </div>
+            <div class="row">
+                <div class="col-4">.col-4</div>
+                <div class="col-2 ms-3">.col-2 .ms-3</div>
+            </div>
+            <div class="row">
+                <div class="col-4">.col-4</div>
+                <div class="col-2 ms-4">.col-2 .ms-4</div>
+            </div>
+            <div class="row">
+                <div class="col-4">.col-4</div>
+                <div class="col-2 ms-5">.col-2 .ms-5</div>
+            </div>
+        </div>
+        <div class="container mt-5 mb-5">
+            <div class="row">
+                <div class="col mt-1">.col .mt-1</div>
+                <div class="col mt-2">.col mt-2</div>
+                <div class="col mt-3">.col .mt-3</div>
+                <div class="col mt-4">.col .mt-4</div>
+                <div class="col mt-5">.col. mt-5</div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="light col pt-1">.col .pt-1</div>
+                <div class="light col pt-2">.col .pt-2</div>
+                <div class="light col pt-3">.col .pt-3</div>
+                <div class="light col pt-4">.col .pt-4</div>
+                <div class="light col pt-5">.col .pt-5</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <style>
+        div[class|="col"] {
+            border: 2px solid white;
+            background-color: cornflowerblue;
+            height: 50px;
+            text-align: center;
+        }
+
+        .grid-example {
+            margin-top: 100px;
+        }
+
+        div[class*="light"] {
+            border: 2px solid white;
+            background-color: lightskyblue;
+            height: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="mt-3">
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Fixed Width</h2>
+            <p>Column widths are fixed and the same width in the row</p>
+            <div class="row ">
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+            </div>
+            <div class="row">
+                <div class="col light">.col</div>
+                <div class="col light">.col</div>
+                <div class="col light">.col</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>By Column Breakpoint</h2>
+            <p>Column widths specified by breakpoints, other columns assume remaining rows</p>
+            <div class="row row-odd">
+                <div class="col-8">.col-8</div>
+                <div class="col">.col</div>
+            </div>
+            <div class="row row-even">
+                <div class="col light">.col</div>
+                <div class="col-6 light">.col-6</div>
+                <div class="col light">.col</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Auto Width</h2>
+            <p>Auto width columns take up the room needed for the content in the columns. </p>
+            <div class="row">
+                <div class="col-auto">.col-auto</div>
+                <div class="col">.col</div>
+            </div>
+            <div class="row">
+                <div class="col light">.col</div>
+                <div class="col-auto light">.col-auto</div>
+                <div class="col-7 light">.col-7</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Responsive</h2>
+            <p>Columns widths changing based on device breakpoints. Columns are continued on a new row if their widths
+                don't fit in the 12 column bootstrap grid</p>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">.col-12 .col-md-6 .col-lg-3</div>
+                <div class="col-12 col-md-6 col-lg-3">.col-12 .col-md-6 .col-lg-3</div>
+                <div class="col-6 col-lg-3">.col-6 .col-lg-3</div>
+                <div class="col-6 col-lg-3">.col-6 .col-lg-3</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Responsive</h2>
+            <p>Columns widths changing based on device breakpoints. Columns are continued on a new row if their widths
+                don't fit in the 12 column bootstrap grid</p>
+            <div class="row">
+                <div class="col-12 col-sm-3 col-md-6 col-lg">.col-12 .col-sm-3 .col-md-6 .col-lg</div>
+                <div class="col-6 col-sm-9 col-md-6 col-lg-3">.col-6 .col-sm-9 .col-md-6 .col-lg-3</div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-sm-4 light">.col-6 .col-sm-4</div>
+                <div class="col-6 col-sm-4 light">.col-6 .col-sm-4</div>
+                <div class="col-6 col-sm-4 light">.col-6 .col-sm-4</div>
+                <div class="col-6 col-sm-4 light">.col-6 .col-sm-4</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Row columns - auto</h2>
+            <p>The number of columns in the grid can be set on the row div. This grid uses auto width, so columns take
+                up the room needed for content</p>
+            <div class="row row-cols-auto row-odd">
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Row columns - Number of columns</h2>
+            <p>The number of columns in the grid can be set on the row div. This grid a rows with one, two, and three
+                column grids</p>
+            <div class="row row-cols-1">
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+            </div>
+            <div class="row row-cols-2">
+                <div class="col light">.col</div>
+                <div class="col light">.col</div>
+                <div class="col light">.col</div>
+                <div class="col light">.col</div>
+            </div>
+            <div class="row row-cols-4">
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Row columns - Number of columns - responsive</h2>
+            <p>The number of columns in the grid can be set on the row div using device breakpoints. Small devices have
+                1 column, medium devices have 2 columns, large devices have 4 columns.</p>
+            <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-4">
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+                <div class="col">.col</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Nesting</h2>
+            <p>Nesting grids inside columns.</p>
+            <div class="row">
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-2 light">.col-2</div>
+                        <div class="col-6 light">.col-6</div>
+                        <div class="col light">.col</div>
+                    </div>
+                </div>
+                <div class="col-6">.col-6</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

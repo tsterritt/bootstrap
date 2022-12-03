@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Groups</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+
+</head>
+<body>
+
+<div class="mt-3">
+    <div class="container">
+        <h2>Input Group</h2>
+        <p>Use input-group-class on an outer div element to smush elements together</p>
+        <p></p>
+        <div class="mt-5">
+            <h3>Text</h3>
+            <p>Add the input-group-text class to a span or label element to add a label as part of the form control</p>
+            <div class="input-group mt-3">
+                <label for="text1" class="input-group-text">Label</label>
+                <input type="text" class="form-control" id="text1">
+            </div>
+            <div class="input-group mt-3">
+                <span class="input-group-text">Span</span>
+                <input type="text" class="form-control" id="text2">
+            </div>
+            <div class="input-group mt-3">
+                <input type="text" class="form-control" id="text3">
+                <label for="text3" class="input-group-text">Label</label>
+            </div>
+            <div class="input-group mt-3">
+                <input type="text" class="form-control" id="text4">
+                <span class="input-group-text">Span</span>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h3>Sizing</h3>
+            <p>Use class="input-group input-group-sm" *-md and *-lg to control sizes of the input groups</p>
+            <div class="input-group input-group-sm mt-3">
+                <label for="textSmall" class="input-group-text">Small</label>
+                <input type="text" class="form-control" id="textSmall">
+            </div>
+            <div class="input-group input-group-md mt-3">
+                <label for="textMedium" class="input-group-text">Medium</label>
+                <input type="text" class="form-control" id="textMedium">
+            </div>
+            <div class="input-group input-group-lg mt-3">
+                <label for="textLarge" class="input-group-text">Large</label>
+                <input type="text" class="form-control" id="textLarge">
+            </div>
+            <div class="input-group mt-3">
+                <label for="textDefault" class="input-group-text">Default</label>
+                <input type="text" class="form-control" id="textDefault">
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h3>Radio</h3>
+            <p>Adding radios to an input group and stlying them as buttons provides a different look for radios</p>
+            <div class="input-group mt-3">
+                <div class="form-check">
+                    <input type="radio" class="form-check-input btn-check" id="radio1" name="radioGroup" checked>
+                    <label class="btn btn-outline-primary" for="radio1">Choice 1</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input btn-check" id="radio2" name="radioGroup">
+                    <label class="btn btn-outline-primary" for="radio2">Choice 2</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input btn-check" id="radio3" name="radioGroup">
+                    <label class="btn btn-outline-primary" for="radio3">Choice 3</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h3>Text Area</h3>
+            <p>Can style radios in a input group as buttons using by adding the btn-check class to the input and btn
+                btn-outline to the labels</p>
+            <div class="input-group mt-3">
+                <label for="textarea1" class="input-group-text">Message</label>
+                <textarea class="form-control" id="textarea1">Enter your message</textarea>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h3>Select</h3>
+            <p>Add a label to a select list using an input group</p>
+            <div class="input-group mt-3">
+                <label for="select1" class="input-group-text">Choose</label>
+                <select class="form-select" id="select1">
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mt-5 mb-5">
+            <h3>Button</h3>
+            <p>Can buttons in an input group</p>
+            <div class="input-group mt-3">
+                <input type="text" class="form-control" id="searchText">
+                <button type="button" class="btn btn-primary">Search</button>
+            </div>
+            <div class="input-group mt-3">
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-secondary">Secondary</button>
+                <button type="button" class="btn btn-close"></button>
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-dark">Dark</button>
+                <button type="button" class="btn btn-check">Check</button>
+                <button type="button" class="btn btn-info">Info</button>
+            </div>
+        </div>
+
+        <div class="mt-5 mb-5">
+            <h3>Drop Down</h3>
+            <p></p>
+            <div class="input-group mt-3">
+                <div class="dropdown">
+                    <button id="dropdown1" type="button" class="btn btn-primary dropdown-toggle"
+                            data-bs-toggle="dropdown">Choose Option
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">One</li>
+                        <li class="dropdown-item">Two</li>
+                        <li class="dropdown-item">Three</li>
+                    </ul>
+                </div>
+                <input type="text" class="form-control">
+                <div class="input-group mt-3">
+                        <button type="button" class="btn btn-primary">Choose Option</button>
+                        <button id="dropdown2" type="button"
+                                class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">
+                            <span class="visually-hidden">Toggle</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">One</li>
+                            <li class="dropdown-item">Two</li>
+                            <li class="dropdown-item">Three</li>
+                        </ul>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+
+
+        <script src="../js/bootstrap.bundle.min.js"></script>
+</body>

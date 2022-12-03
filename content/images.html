@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Images</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <style>
+        .cfdemo {
+            border: 2px solid white;
+            background-color: cornflowerblue;
+            padding: 10px;
+        }
+        div[class="col"] {
+            border: 2px solid white;
+            background-color: cornflowerblue;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="mt-3">
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Non Responsive Image</h2>
+            <img src="../img/300x200.png"/>
+        </div>
+    </div>
+</div>
+
+
+<div class="mt-3">
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Responsive Image</h2>
+            <p>img-fluid class makes image responsive. The image takes up the real estate of the parent and scales for the viewport. The two 1200x600 images in the grid scale to take up the
+            full real estate available in their respective columns, but scale responsively</p>
+            <img src="../img/1200x600.png" class="img-fluid"/>
+            <div class="row mt-5">
+                <div class="col"><img src="../img/1200x600.png" class="img-fluid"/></div>
+                <div class="col"><img src="../img/1200x600.png" class="img-fluid"/></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="mt-3">
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Rounded corners</h2>
+            <p>rounded- classes control corner rounding.</p>
+            <div class="row mt-5">
+                <div class="col">.rounded-top<img src="../img/100x100.png" class="rounded-top"/></div>
+                <div class="col">.rounded-bottom<img src="../img/100x100.png" class="rounded-bottom"/></div>
+                <div class="col">.rounded-end<img src="../img/100x100.png" class="rounded-end"/></div>
+                <div class="col">.rounded-start<img src="../img/100x100.png" class="rounded-start"/></div>
+                <div class="col">.rounded-circle<img src="../img/100x100.png" class="rounded-circle"/></div>
+                <div class="col">.rounded-pill<img src="../img/100x100.png" class="rounded-pill" style="width:100px; height: 50px"/></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="mt-3">
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Thumbnail</h2>
+            <p>img-thumbnail class adds a border, responsiveness, and rounds the corners.  Note - thumbnail doesn't resize the image.
+            </p>
+            <div class="row mt-5">
+                <div class="col">
+                .img-thumbnail<img src="../img/1200x600.png" class="img-thumbnail"/></div>
+            </div>
+            <div class="row mt-5">
+                <div class="col">.img-thumbnail .rounded-0<img src="../img/1200x600.png" class="img-thumbnail rounded-0"/></div>
+                <div class="col">.img-thumbnail rounded-pill<img src="../img/1200x600.png" class="img-thumbnail rounded-pill"/></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="mt-3">
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Float</h2>
+            <p>use float-* classes to position elements. Note, if floated elements are taller than the container, it will overflow outside of the container.
+                The clearfix class fixes this.
+            </p>
+            <div class="cfdemo">No clearfix class, floated elements extend outside of containing div
+                <div class=""><img src="../img/100x100.png" class="float-start"/></div>
+                <div class=""><img src="../img/100x100.png" class="float-end"/></div>
+            </div>
+            <div class="cfdemo clearfix" style="margin-top: 100px">Using clearfix adjusts containing div to contain the floated elements
+                <div class=""><img src="../img/100x100.png" class="float-start"/></div>
+                <div class=""><img src="../img/100x100.png" class="float-end"/></div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <p>When floating images, subsequent elements will wrap around the image. Use clear class to 'clear' the float from elements to the left, right, or both.
+            </p>
+            <div class="cfdemo clearfix">
+                <div>
+                    <img src="../img/50x50.png" class="float-start mx-2"/>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </div>
+            </div><div class="cfdemo clearfix">
+                <div>
+                    <img src="../img/50x50.png" class="float-start mx-2"/>
+                    <div class="d-block" style="clear:left">style="clear:left" on the containing div negates the float affect on the text, which causes the text to be positioned under the image. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-3">
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Spacing utilities</h2>
+            <p>d-block and mx-* classes to add margins that align images. D-block causes an element to take up a whole line, and m*-auto adds margins to the
+                start (ms-aut), end (me-auto), or on both sides (mx-auto)
+            </p>
+            <div class="cfdemo">
+                <div class=""><img src="../img/100x100.png" class="d-block me-auto"/></div>
+                <div class=""><img src="../img/100x100.png" class="d-block mx-auto"/></div>
+                <div class=""><img src="../img/100x100.png" class="d-block ms-auto"/></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="mt-3">
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Image Caption</h2>
+            <p>Using figure element and figure-img class around an image allows the image to have a caption with padding between the image and the caption. The figcaption element with added figure-caption class style the caption. The caption text can be position
+            with the text-center, text-end, and text-start (the default) classes </p>
+            <figure>
+                <img src="../img/1200x600.png" class="figure-img img-fluid"/>
+                <figcaption class="figure-caption">Caption for image</figcaption>
+            </figure>
+            <figure>
+                <img src="../img/1200x600.png" class="figure-img img-fluid"/>
+                <figcaption class="figure-caption text-center">Caption for image</figcaption>
+            </figure>
+              <figure>
+                <img src="../img/1200x600.png" class="figure-img img-fluid"/>
+                <figcaption class="figure-caption text-end">Caption for image</figcaption>
+            </figure>
+        </div>
+    </div>
+</div>
+
+
+<script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

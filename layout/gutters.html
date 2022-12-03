@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gutters</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+</head>
+<style>
+    div[class*="row"] {
+            background-color: lightslategrey;
+    }
+    div[class*="col"] {
+            border: 1px solid lightslategray;
+            background-color: lightskyblue;
+        }
+    .ccontent {
+            border: 1px solid white;
+            background-color: white;
+            height: 50px;
+            text-align: center;
+    }
+</style>
+<body>
+
+<div class="mt-3">
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Horizontal Gutters</h2>
+            <p>gx|y-* classes on the row add width between <i>column content</i>. x=horizontal, y=vertical. Note: gx|y classes split the width of the gutter - 1/2 on one side, 1/2 on the other. There are responsive classes (gx-lg-5 e.g.)</p>
+            <p>Bottom-line - similar to adding padding but saves typing since gx-* classes go on the row not the columns. Messes up row widths (rows 3 and 4).</p>
+            <p>* Row1 is for comparison - just default row and column classes, with no padding or gutters. Except the default, which looks like it's px-3</p>
+            <p>* Row2 adds a px-3 to each column, which increases the space between the columns</p>
+            <p>* Row3 achieves a similar result to row2 using a gutter (gx-3) on the row instead of a px-3 on each column, which saves typing.</p>
+            <p>* Row4 uses gx-0 on the row, which overrides the default padding that bootstrap adds. </p>
+
+             <div class="row">
+                <div class="col-3">.col-3<div class="ccontent">column content</div></div>
+                <div class="col-3">.col-3<div class="ccontent">column content</div></div>
+                <div class="col-3">.col-3<div class="ccontent">column content</div></div>
+            </div>
+            <div class="row">
+                <div class="col-3 px-2">.col-3<div class="ccontent">column content</div></div>
+                <div class="col-3 px-2">.col-3<div class="ccontent">column content</div></div>
+                <div class="col-3 px-2">.col-3<div class="ccontent">column content</div></div>
+            </div>
+            <div class="row gx-3">
+                <div class="col-3">.col-3<div class="ccontent">column content</div></div>
+                <div class="col-3">.col-3<div class="ccontent">column content</div></div>
+                <div class="col-3">.col-3<div class="ccontent">column content</div></div>
+            </div>
+            <div class="row gx-0">
+                <div class="col-3">.col-3<div class="ccontent">column content</div></div>
+                <div class="col-3">.col-3<div class="ccontent">column content</div></div>
+                <div class="col-3">.col-3<div class="ccontent">column content</div></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="mt-3">
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Vertical Gutters</h2>
+            <p>* Row1 - reference row, just a row with 3 col-12 columns</p>
+            <p>* Row2 - using mt-5 class on each column to add a top 'gutter' between rows</p>
+            <p>* Row3 - using a gy-5 class on the row to add a top 'gutter' between rows.  </p>
+             <div class="row">
+                <div class="col-12"><div class="ccontent">column content</div></div>
+                 <div class="col-12"><div class="ccontent">column content</div></div>
+                <div class="col-12 "><div class="ccontent">column content</div></div>
+            </div>
+            <div class="row mt-5"><!--spacer row--></div>
+             <div class="row">
+                <div class="col-12 mt-3"><div class="ccontent">column content</div></div>
+                 <div class="col-12 mt-3"><div class="ccontent">column content</div></div>
+                <div class="col-12 mt-3"><div class="ccontent">column content</div></div>
+             </div>
+            <div class="row mt-5"><!--spacer row--></div>
+             <div class="row gy-3">
+                <div class="col-12"><div class="ccontent">column content</div></div>
+                 <div class="col-12"><div class="ccontent">column content</div></div>
+                <div class="col-12"><div class="ccontent">column content</div></div>
+             </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

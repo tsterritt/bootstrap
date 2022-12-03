@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Overview</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+</head>
+<body>
+
+
+<div class="mt-3">
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Form Inputs, Labels, Legends, and Buttons</h2>
+            <p>
+                form-control class formats input fields, form-label formats labels
+                <br>
+                btn btn-primary classes format buttons
+                <br>
+                Legend element adds a legend to forms
+                <br>
+                rounded-0 classes can make inputs have square corners
+            </p>
+            <form>
+                <fieldset>
+                    <legend>Legend</legend>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" placeholder="Enter email address" id="email"/>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" placeholder="Enter password" id="password"/>
+                    </div>
+                     <div class="mb-3">
+                        <label for="name" class="form-label">Name  with square corners</label>
+                        <input type="name" class="form-control rounded-0" placeholder="Enter name" id="name"/>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="mt-3">
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Help Text below an input</h2>
+            <p>
+            </p>
+            <form>
+                <fieldset>
+                    <div class="mb-3">
+                        <p>Adding a p under the input field using the form-text class will add formatted text under the
+                            input field. The aria-describedBy elements points screen readers to the help text</p>
+                        <label for="Name" class="form-label">Name</label>
+                        <input type="text" class="form-control" placeholder="Name" id="name"
+                               aria-describedby="help-text"/>
+                        <p id="help-text" class="form-text">Help text</p>
+                    </div>
+                    <div class="mb-3">
+                        <p>Can use the bootstrap grid system to align forms inline. The col-form-label class on the label will center the text label vertically. </p>
+                        <div class="row">
+                            <div class="col-auto">
+                                <label for="Name" class="col-form-label">Name</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="text" class="form-control" placeholder="Name" id="name"
+                                       aria-describedby="help-text"/>
+                            </div>
+                            <div class="col-auto">
+                                <p id="help-text" class="form-text">Help text</p>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="mt-3">
+    <div class="mb-5 grid-example">
+        <div class="container">
+            <h2>Disabled Input Fields</h2>
+            <p>
+                Add the disabled attribute to disable input and button elements.
+            </p>
+            <form>
+                <fieldset>
+                    <div class="mb-3">
+                        <label for="disabledPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" placeholder="Enter password" id="disabledPassword" disabled/>
+                    </div>
+                    <button type="submit" class="btn btn-primary" disabled>Submit</button>
+                </fieldset>
+            </form>
+            <form class="mt-5">
+                <p>The disabled attribute can also be added to the fieldset element to disable all elements in the form.</p>
+                <fieldset disabled>
+                    <div class="mb-3">
+                        <label for="disabledPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" placeholder="Enter password" id="disabledPassword"/>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
